@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+:root {
+    --fondo: #eff1f5;
+    --blanco: #fff;
+    --pupura: #5a189a;
+    --rojo: red;
+    --texto-inhabil: #999;
+    --texto-item-carrito: #666;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: var(--fondo);
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+h2 {
+    color: var(--pupura);
+    border-bottom: 3px solid var(--pupura);
+    padding-bottom: 10px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.tarjeta-producto {
+    padding: 15px;
+    position: relative;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto-info {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--blanco);
+    box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.02),
+        0px 5px 4px rgba(3, 7, 18, 0.03),
+        0px 12px 9px rgba(3, 7, 18, 0.05),
+        0px 20px 15px rgba(3, 7, 18, 0.06),
+        0px 32px 24px rgba(3, 7, 18, 0.08);
+
+}
+
+.producto-nombre {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.producto-precio {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--pupura);
+}
+
+.contenedor-contador {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-contador {
+    width: 20px;
+    height: 20px;
+    color: var(--pupura);
+    border: 1px solid var(--pupura);
+    background: var(--blanco);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn-contador:hover {
+    background: var(--pupura);
+    color: var(--blanco);
+}
+
+
+.carrito {
+    max-height: 500px;
+    width: 300px;
+    padding: 20px;
+    overflow: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: var(--blanco);
+    box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.02),
+        0px 5px 4px rgba(3, 7, 18, 0.03),
+        0px 12px 9px rgba(3, 7, 18, 0.05),
+        0px 20px 15px rgba(3, 7, 18, 0.06),
+        0px 32px 24px rgba(3, 7, 18, 0.08);
+
+}
+
+.carrito-vacio {
+    text-align: center;
+    padding: 40px;
+    color: var(--texto-inhabil);
+}
+
+.carrito-total {
+    display: none;
+}
+
+.carrito-item {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    animation: slideIn 0.3s ease;
+}
+
+.carrito-item-nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.carrito-item-detalles {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+    color: var(--texto-item-carrito);
+}
+
+.carrito-item-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: var(--fondo);
+}
+
+.carrito-item-subtotal {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--pupura);
+}
+
+.total-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: var(--texto-item-carrito);
+}
+
+.total-label{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.total-cantidad{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--pupura);
+}
+
+.btn-vaciar{
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: var(--blanco);
+    background: var(--rojo);
+}
+
+@media (max-width: 768px){
+    main{
+        grid-template-columns: 4fr;
+    }
+
+    .carrito{
+        width: 100%;
+    }
+
+    .productos{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    
+}

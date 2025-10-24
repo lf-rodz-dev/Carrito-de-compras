@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="image/carrito.png">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <main>
+        <div class="contenedor-productos">
+            <div class="productos"></div>
+        </div>
+        <div class="carrito">
+            <h2>🛒 Carrito</h2>
+            <div id="carritoContenido">
+                    <div class="carrito-vacio">
+                        <p>🛒 Tu carrito está vacío</p>
+                        <p>¡Usa los contadores para agregar productos!</p>
+                    </div>
+                </div>
+                <div class="carrito-total">
+                    <div class="total-items">
+                        <span>Total de artículos:</span>
+                        <span id="totalItems">0</span>
+                    </div>
+                    <div class="total-label">
+                        <span>Total a pagar:</span>
+                        <span class="total-cantidad">$0.00</span>
+                    </div>
+                    <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
