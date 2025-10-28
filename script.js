@@ -65,7 +65,7 @@ function cambiarCantidad(id, cambio) {
 //Renderizar carrito
 function mostrarCarrito() {
     const contenido = document.getElementById('carritoContenido');
-    const itemsEnCarrito = Object.keys(carrito).filter(id => carrito[id] > 0);
+    const itemsEnCarrito = Object.keys(carrito)
 
     if (itemsEnCarrito.length === 0) {
         contenido.innerHTML = `
